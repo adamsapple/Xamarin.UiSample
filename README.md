@@ -1,7 +1,7 @@
 # Xamarin.UiSample
 private Experiment codes.
 
-Created at 2018/9/12.
+Created at 2018-9-12.
 
 ### Versions.
 - NetStandard.Library v2.0.3
