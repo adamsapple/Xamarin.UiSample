@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FormsPlugin.Iconize;
 
 namespace UiSample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage1 : TabbedPage
+    public partial class TabbedPage1 : IconTabbedPage //TabbedPage
     {
         public TabbedPage1()
         {

@@ -13,7 +13,8 @@ namespace UiSample
 			InitializeComponent();
 
 
-            MainPage = new NavigationPage(new TabbedPage1());
+            MainPage = new FormsPlugin.Iconize.IconNavigationPage(new TabbedPage1());
+            //MainPage = new FormsPlugin.Iconize.IconNavigationPage(new Page1());
         }
 
 		protected override void OnStart ()
