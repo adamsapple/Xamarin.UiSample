@@ -12,12 +12,19 @@ namespace UiSample
 		{
 			InitializeComponent();
 
+            // Appending Iconize.(part 1) >= v3.2
+            Plugin.Iconize.Iconize
+                                .With(new Plugin.Iconize.Fonts.FontAwesomeSolidModule())
+                                .With(new Plugin.Iconize.Fonts.FontAwesomeRegularModule())
+                                .With(new Plugin.Iconize.Fonts.IoniconsModule())
+                                .With(new Plugin.Iconize.Fonts.MaterialModule());
 
-            MainPage = new FormsPlugin.Iconize.IconNavigationPage(new TabbedPage1());
+
+            MainPage = new Plugin.Iconize.IconNavigationPage(new TabbedPage1());
             //MainPage = new FormsPlugin.Iconize.IconNavigationPage(new Page1());
         }
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
              xmlns:vm="clr-namespace:UiSample.ViewModels;"
              x:Class="UiSample.Views.Page1"
              Title="">
@@ -15,20 +15,19 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <iconize:IconLabel Text="fa-github" TextColor="Red" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <iconize:IconLabel Text="far-building" 
+                               TextColor="Red" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
             <Slider x:Name="slider1"
-                Minimum="0" Maximum="360"
-                Value="{Binding Angle,  Mode=TwoWay}"
-                VerticalOptions="CenterAndExpand">
-                <!--BindingContext="{x:Reference slider1}"-->
-            </Slider>
-
+                    Minimum="0" Maximum="360"
+                    Value="{Binding Angle,  Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand"
+                    MaximumTrackColor="#80404040" />
             <Label BindingContext="{x:Reference  Name=slider1}" 
-               Text="{Binding Name=Value, Mode=OneWay, StringFormat='The angle is {0:F0} degrees.'}"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+                   Text="{Binding Value, Mode=OneWay, StringFormat='The angle is {0:F0} degrees.'}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
             <Button Command="{Binding PutAngleCommand}" Text="Sample CMD" />
         </StackLayout>
     </ContentPage.Content>

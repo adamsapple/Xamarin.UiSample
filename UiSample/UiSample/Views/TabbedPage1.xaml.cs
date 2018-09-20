@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using FormsPlugin.Iconize;
+using Plugin.Iconize;
 
 namespace UiSample.Views
 {

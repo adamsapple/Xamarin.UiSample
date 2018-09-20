@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <iconize:IconTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+            xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
             xmlns:views="clr-namespace:UiSample.Views"
             x:Class="UiSample.Views.TabbedPage1"
             CurrentPageChanged="OnCurrentPageChanged"
@@ -9,8 +9,8 @@
     <!--Pages can be added as references or inline-->
     <iconize:IconTabbedPage.Children>
         <views:Page1 Icon="ion-android-compass" />
-        <ContentPage Title="" Icon="fa-home" />
-        <ContentPage Title="" Icon="fa-gear" />
+        <ContentPage Title="" Icon="fas-home" />
+        <ContentPage Title="" Icon="fa-cog" />
         <ContentPage Title="" Icon="md-info" />
     </iconize:IconTabbedPage.Children>
 </iconize:IconTabbedPage>
