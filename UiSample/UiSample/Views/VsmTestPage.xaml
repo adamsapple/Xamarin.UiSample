@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<view:ContentPageEx xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:UiSample.Views"
+             x:Class="UiSample.Views.VsmTestPage">
+    <view:ContentPageEx.Resources>
+        <Style x:Key="ToolButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="LightGray" />
+            <Setter Property="TextColor"       Value="LawnGreen" />
+            <Setter Property="BorderWidth"     Value="2" />
+            <Setter Property="BorderColor"     Value="Pink" />
+            <Setter Property="FontSize"        Value="15" />
+            <Setter Property="CornerRadius"    Value="23" />
+            <Setter Property="WidthRequest"    Value="46" />
+            <Setter Property="HeightRequest"   Value="46" />
+        </Style>
+    </view:ContentPageEx.Resources>
+    <view:ContentPageEx.Content>
+        <StackLayout x:Name="labels">
+            <Frame BackgroundColor="#2196F3" Padding="8" CornerRadius="0">
+                <Label Text="Visual State Manager's Test." HorizontalTextAlignment="Center" TextColor="White" FontSize="Small"/>
+            </Frame>
+            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+            <!--<Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>-->
+            <Label x:Name = "label1" Text="Label1" HorizontalTextAlignment="Center" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="State1" />
+                        <VisualState x:Name="State2">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Green" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="State3">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Blue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Label>
+            <Label x:Name = "label2" Text="Label2" HorizontalTextAlignment="Center" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="State1">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Green" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="State2" />
+                        <VisualState x:Name="State3">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Red" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Label>
+            <Label x:Name = "label3" Text="Label3" HorizontalTextAlignment="Center" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="State1">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Blue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="State2">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Red" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="State3">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Green" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Label>
+            <!--<Label FontSize="16" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>-->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="1" HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_1" Style="{StaticResource ToolButtonStyle}" />
+                <Button Text="2" HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_2" Style="{StaticResource ToolButtonStyle}" />
+                <Button Text="3" HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_3" Style="{StaticResource ToolButtonStyle}" />
+            </StackLayout>
+        </StackLayout>
+    </view:ContentPageEx.Content>
+</view:ContentPageEx>
